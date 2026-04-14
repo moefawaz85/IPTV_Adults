@@ -1,0 +1,164 @@
+{
+  "id": "org.example.ultimate.addon",
+  "version": "1.0.0",
+  "name": "Ultimate Stremio Addon",
+  "description": "A fully-featured Stremio addon manifest with all available and applicable options.",
+  "logo": "https://example.com/logo.png",
+  "background": "https://example.com/background.jpg",
+  "contactEmail": "admin@example.com",
+  "behaviorHints": {
+    "adult": false,
+    "p2p": false,
+    "configurable": true,
+    "configurationRequired": false
+  },
+  "types": [
+    "movie",
+    "series",
+    "channel",
+    "tv",
+    "other"
+  ],
+  "idPrefixes": [
+    "tt",
+    "kitsu",
+    "example_id"
+  ],
+  "resources": [
+    {
+      "name": "catalog",
+      "types": ["movie", "series", "channel", "tv", "other"],
+      "idPrefixes": ["tt", "kitsu", "example_id"]
+    },
+    {
+      "name": "meta",
+      "types": ["movie", "series", "channel", "tv", "other"],
+      "idPrefixes": ["tt", "kitsu", "example_id"]
+    },
+    {
+      "name": "stream",
+      "types": ["movie", "series", "channel", "tv", "other"],
+      "idPrefixes": ["tt", "kitsu", "example_id"]
+    },
+    {
+      "name": "subtitles",
+      "types": ["movie", "series"],
+      "idPrefixes": ["tt", "kitsu", "example_id"]
+    }
+  ],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "top_movies",
+      "name": "Top Movies",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": false
+        },
+        {
+          "name": "genre",
+          "isRequired": false,
+          "options": [
+            "Action", "Adventure", "Animation", "Comedy", "Crime",
+            "Documentary", "Drama", "Fantasy", "Horror", "Mystery",
+            "Romance", "Sci-Fi", "Thriller", "Western"
+          ]
+        },
+        {
+          "name": "skip",
+          "isRequired": false
+        }
+      ],
+      "extraSupported": ["search", "genre", "skip"],
+      "extraRequired": []
+    },
+    {
+      "type": "series",
+      "id": "top_series",
+      "name": "Top Series",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": false
+        },
+        {
+          "name": "genre",
+          "isRequired": false,
+          "options": [
+            "Action", "Adventure", "Animation", "Comedy", "Crime",
+            "Documentary", "Drama", "Fantasy", "Horror", "Mystery",
+            "Romance", "Sci-Fi", "Thriller"
+          ]
+        },
+        {
+          "name": "skip",
+          "isRequired": false
+        }
+      ],
+      "extraSupported": ["search", "genre", "skip"],
+      "extraRequired": []
+    },
+    {
+      "type": "channel",
+      "id": "live_channels",
+      "name": "Live Channels",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": false
+        },
+        {
+          "name": "genre",
+          "isRequired": false,
+          "options": ["News", "Sports", "Entertainment", "Kids", "Music", "Documentary"]
+        },
+        {
+          "name": "skip",
+          "isRequired": false
+        }
+      ],
+      "extraSupported": ["search", "genre", "skip"],
+      "extraRequired": []
+    },
+    {
+      "type": "tv",
+      "id": "live_tv",
+      "name": "Live TV",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": false
+        },
+        {
+          "name": "genre",
+          "isRequired": false,
+          "options": ["News", "Sports", "Entertainment", "Kids", "Music"]
+        },
+        {
+          "name": "skip",
+          "isRequired": false
+        }
+      ],
+      "extraSupported": ["search", "genre", "skip"],
+      "extraRequired": []
+    },
+    {
+      "type": "other",
+      "id": "misc_content",
+      "name": "Miscellaneous",
+      "extra": [
+        {
+          "name": "search",
+          "isRequired": false
+        },
+        {
+          "name": "skip",
+          "isRequired": false
+        }
+      ],
+      "extraSupported": ["search", "skip"],
+      "extraRequired": []
+    }
+  ]
+}
